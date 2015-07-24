@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+    }
+}
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 'android-22'
+    buildToolsVersion '22.0.1'
+
+    signingConfigs {
+        release {
+            storeFile file("formpost_release.keystore")
+            storePassword "formpost"
+            keyAlias "formpost"
+            keyPassword "formpost"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            signingConfig signingConfigs.release
+        }
+    }
+}
