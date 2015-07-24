@@ -1,7 +1,7 @@
 # formpost
 Simple android POST form example
 
-Steps here following:
+Following:
 
 * http://www.onlymobilepro.com/2013/03/16/submitting-android-form-data-via-post-method/
 
